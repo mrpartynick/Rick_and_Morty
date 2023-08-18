@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OriginCell: BaseCharCell {
+class OriginCell: BaseCell {
     public static let id = "Origin"
     public let originNameLabel = BaseWhiteLabel(text: "Earth")
     public let planetLabel = BaseWhiteLabel(text: "Planet")

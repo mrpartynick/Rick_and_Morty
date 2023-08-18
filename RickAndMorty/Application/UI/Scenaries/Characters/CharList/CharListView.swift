@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharListView: BaseCharCollectionVC {
+class CharListView: BaseCharListCollection {
     private var _completion: ((T) -> ())?
     
     init(presenter: Int?) {

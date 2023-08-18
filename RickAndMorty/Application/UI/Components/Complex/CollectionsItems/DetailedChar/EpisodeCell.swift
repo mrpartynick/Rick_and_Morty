@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EpisodeCell: BaseCharCell {
+class EpisodeCell: BaseCell {
     public static let id = "Episode"
     
     public let nameLabel = BaseWhiteLabel(text: "Pilot")

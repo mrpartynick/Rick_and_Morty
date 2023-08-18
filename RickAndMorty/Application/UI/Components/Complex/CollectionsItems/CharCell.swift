@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharCell: BaseCharCell {
+class CharCell: BaseCell {
     public let image = UIImageView()
     
     public let nameLabel = BaseWhiteLabel(text: "Rick Sanchez")

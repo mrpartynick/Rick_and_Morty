@@ -51,43 +51,25 @@ class BaseDetailedCharCollection: UICollectionViewController {
             
             switch section {
             case .character:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(200))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-                let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: self.sideInsets, bottom: 52, trailing: self.sideInsets)
-
+                let group = self.createGroup(height: 200)
+                let section = self.createSection(group: group, topPadding: 0, bottomPadding: 52)
                 return section
                 
             case .info:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(124))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-                let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: self.sideInsets, bottom: 24, trailing: self.sideInsets)
+                let group = self.createGroup(height: 124)
+                let section = self.createSection(group: group, topPadding: 16, bottomPadding: 24)
                 section.boundarySupplementaryItems = [self.createHeader()]
                 return section
                 
             case .origin:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(80))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-                let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: self.sideInsets, bottom: 24, trailing: self.sideInsets)
+                let group = self.createGroup(height: 80)
+                let section = self.createSection(group: group, topPadding: 16, bottomPadding: 24)
                 section.boundarySupplementaryItems = [self.createHeader()]
                 return section
                 
             case .episodes:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(86))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
-                let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: self.sideInsets, bottom: 0, trailing: self.sideInsets)
+                let group = self.createGroup(height: 86)
+                let section = self.createSection(group: group, topPadding: 16, bottomPadding: 0)
                 section.boundarySupplementaryItems = [self.createHeader()]
                 section.interGroupSpacing = 16
                 return section
@@ -101,6 +83,23 @@ class BaseDetailedCharCollection: UICollectionViewController {
         return layout
     }
     
+    //MARK: - create group
+    private func createGroup(height: CGFloat) -> NSCollectionLayoutGroup {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(height))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        return group
+    }
+    
+    //MARK: - create section
+    private func createSection(group: NSCollectionLayoutGroup, topPadding: CGFloat, bottomPadding: CGFloat) -> NSCollectionLayoutSection {
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: topPadding, leading: self.sideInsets, bottom: bottomPadding, trailing: self.sideInsets)
+        return section
+    }
+    
+    //MARK: - create header
     private func createHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
         let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         return header
@@ -148,6 +147,7 @@ extension BaseDetailedCharCollection {
 
     }
     
+    //MARK: - suuplementary view 
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionTitle = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionTitle.id, for: indexPath) as! SectionTitle
         sectionTitle.title = "kek"

@@ -13,7 +13,7 @@
 		CF4133AD2A8EC06A0042D9A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4133AB2A8EC06A0042D9A5 /* LaunchScreen.storyboard */; };
 		CF4133BD2A8EC22F0042D9A5 /* CharacterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133BC2A8EC22F0042D9A5 /* CharacterCoordinator.swift */; };
 		CF4133C02A8EC3310042D9A5 /* ICharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133BF2A8EC3310042D9A5 /* ICharView.swift */; };
-		CF4133C42A8EC3790042D9A5 /* BaseCharCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133C32A8EC3790042D9A5 /* BaseCharCollectionVC.swift */; };
+		CF4133C42A8EC3790042D9A5 /* BaseCharListCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133C32A8EC3790042D9A5 /* BaseCharListCollection.swift */; };
 		CF4133C92A8EC3E30042D9A5 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133C82A8EC3E30042D9A5 /* Character.swift */; };
 		CF4133CB2A8EC40D0042D9A5 /* CharDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133CA2A8EC40D0042D9A5 /* CharDataObject.swift */; };
 		CF4133CE2A8EC4F70042D9A5 /* CharCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133CD2A8EC4F70042D9A5 /* CharCell.swift */; };
@@ -26,7 +26,7 @@
 		CF4133DE2A8F8B7D0042D9A5 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133DD2A8F8B7D0042D9A5 /* DataObject.swift */; };
 		CF4133E12A8F8CFC0042D9A5 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133E02A8F8CFC0042D9A5 /* InfoCell.swift */; };
 		CF4133E32A8F98120042D9A5 /* BaseDetailedCharCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133E22A8F98120042D9A5 /* BaseDetailedCharCollection.swift */; };
-		CF4133E62A8F991B0042D9A5 /* BaseCharCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133E52A8F991B0042D9A5 /* BaseCharCell.swift */; };
+		CF4133E62A8F991B0042D9A5 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133E52A8F991B0042D9A5 /* BaseCell.swift */; };
 		CF4133E82A8FA2550042D9A5 /* OriginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133E72A8FA2550042D9A5 /* OriginCell.swift */; };
 		CF4133EA2A8FA2CC0042D9A5 /* BaseWhiteLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133E92A8FA2CC0042D9A5 /* BaseWhiteLabel.swift */; };
 		CF4133ED2A8FBA770042D9A5 /* PlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133EC2A8FBA770042D9A5 /* PlanetView.swift */; };
@@ -42,7 +42,7 @@
 		CF4133AE2A8EC06A0042D9A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF4133BC2A8EC22F0042D9A5 /* CharacterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCoordinator.swift; sourceTree = "<group>"; };
 		CF4133BF2A8EC3310042D9A5 /* ICharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICharView.swift; sourceTree = "<group>"; };
-		CF4133C32A8EC3790042D9A5 /* BaseCharCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCharCollectionVC.swift; sourceTree = "<group>"; };
+		CF4133C32A8EC3790042D9A5 /* BaseCharListCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCharListCollection.swift; sourceTree = "<group>"; };
 		CF4133C82A8EC3E30042D9A5 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		CF4133CA2A8EC40D0042D9A5 /* CharDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDataObject.swift; sourceTree = "<group>"; };
 		CF4133CD2A8EC4F70042D9A5 /* CharCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharCell.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		CF4133DD2A8F8B7D0042D9A5 /* DataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
 		CF4133E02A8F8CFC0042D9A5 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		CF4133E22A8F98120042D9A5 /* BaseDetailedCharCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetailedCharCollection.swift; sourceTree = "<group>"; };
-		CF4133E52A8F991B0042D9A5 /* BaseCharCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCharCell.swift; sourceTree = "<group>"; };
+		CF4133E52A8F991B0042D9A5 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		CF4133E72A8FA2550042D9A5 /* OriginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginCell.swift; sourceTree = "<group>"; };
 		CF4133E92A8FA2CC0042D9A5 /* BaseWhiteLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWhiteLabel.swift; sourceTree = "<group>"; };
 		CF4133EC2A8FBA770042D9A5 /* PlanetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetView.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		CF4133CC2A8EC4C80042D9A5 /* CollectionsItems */ = {
 			isa = PBXGroup;
 			children = (
-				CF4133E52A8F991B0042D9A5 /* BaseCharCell.swift */,
+				CF4133E52A8F991B0042D9A5 /* BaseCell.swift */,
 				CF4133CD2A8EC4F70042D9A5 /* CharCell.swift */,
 				CF4133E42A8F98C50042D9A5 /* DetailedChar */,
 			);
@@ -237,7 +237,7 @@
 		CF4133D32A8ED1A20042D9A5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CF4133C32A8EC3790042D9A5 /* BaseCharCollectionVC.swift */,
+				CF4133C32A8EC3790042D9A5 /* BaseCharListCollection.swift */,
 				CF4133E22A8F98120042D9A5 /* BaseDetailedCharCollection.swift */,
 			);
 			path = Controllers;
@@ -353,10 +353,10 @@
 			files = (
 				CF4133DC2A8F8AC30042D9A5 /* SectionTitle.swift in Sources */,
 				CF4133DA2A8F71AE0042D9A5 /* TitileHeader.swift in Sources */,
-				CF4133C42A8EC3790042D9A5 /* BaseCharCollectionVC.swift in Sources */,
+				CF4133C42A8EC3790042D9A5 /* BaseCharListCollection.swift in Sources */,
 				CF4133EF2A8FBC890042D9A5 /* EpisodeCell.swift in Sources */,
 				CF4133D82A8F60C50042D9A5 /* CharHeaderView.swift in Sources */,
-				CF4133E62A8F991B0042D9A5 /* BaseCharCell.swift in Sources */,
+				CF4133E62A8F991B0042D9A5 /* BaseCell.swift in Sources */,
 				CF4133E12A8F8CFC0042D9A5 /* InfoCell.swift in Sources */,
 				CF4133EA2A8FA2CC0042D9A5 /* BaseWhiteLabel.swift in Sources */,
 				CF4133DE2A8F8B7D0042D9A5 /* DataObject.swift in Sources */,

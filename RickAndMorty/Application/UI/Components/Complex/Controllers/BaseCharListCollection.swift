@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class BaseCharCollectionVC: UICollectionViewController {
+open class BaseCharListCollection: UICollectionViewController {
     
 //    internal enum State {
 //        case Loading
@@ -68,7 +68,7 @@ open class BaseCharCollectionVC: UICollectionViewController {
 }
 
 //MARK: - data source
-extension BaseCharCollectionVC {
+extension BaseCharListCollection {
     open override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }

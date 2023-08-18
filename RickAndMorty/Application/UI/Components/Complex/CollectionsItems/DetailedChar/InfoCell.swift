@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoCell: BaseCharCell {
+class InfoCell: BaseCell {
     public static let id = "Info"
     
     private enum LabelType {
