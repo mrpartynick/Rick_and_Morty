@@ -20,8 +20,7 @@
 		CF4133D02A8ECC800042D9A5 /* CharListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133CF2A8ECC800042D9A5 /* CharListView.swift */; };
 		CF4133D22A8ECCCC0042D9A5 /* MockDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133D12A8ECCCC0042D9A5 /* MockDataObject.swift */; };
 		CF4133D62A8F5AA00042D9A5 /* DetailedCharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133D52A8F5AA00042D9A5 /* DetailedCharView.swift */; };
-		CF4133D82A8F60C50042D9A5 /* CharHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133D72A8F60C40042D9A5 /* CharHeaderView.swift */; };
-		CF4133DA2A8F71AE0042D9A5 /* TitileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133D92A8F71AE0042D9A5 /* TitileHeader.swift */; };
+		CF4133D82A8F60C50042D9A5 /* CharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133D72A8F60C40042D9A5 /* CharView.swift */; };
 		CF4133DC2A8F8AC30042D9A5 /* SectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133DB2A8F8AC30042D9A5 /* SectionTitle.swift */; };
 		CF4133DE2A8F8B7D0042D9A5 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133DD2A8F8B7D0042D9A5 /* DataObject.swift */; };
 		CF4133E12A8F8CFC0042D9A5 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133E02A8F8CFC0042D9A5 /* InfoCell.swift */; };
@@ -31,6 +30,13 @@
 		CF4133EA2A8FA2CC0042D9A5 /* BaseWhiteLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133E92A8FA2CC0042D9A5 /* BaseWhiteLabel.swift */; };
 		CF4133ED2A8FBA770042D9A5 /* PlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133EC2A8FBA770042D9A5 /* PlanetView.swift */; };
 		CF4133EF2A8FBC890042D9A5 /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133EE2A8FBC890042D9A5 /* EpisodeCell.swift */; };
+		CF4133F32A8FDB020042D9A5 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF4133F22A8FDB020042D9A5 /* Gilroy-Medium.ttf */; };
+		CF4133F92A8FDDB40042D9A5 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF4133F42A8FDDB30042D9A5 /* Gilroy-Bold.ttf */; };
+		CF4133FA2A8FDDB40042D9A5 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF4133F52A8FDDB30042D9A5 /* Gilroy-Light.ttf */; };
+		CF4133FB2A8FDDB40042D9A5 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF4133F62A8FDDB40042D9A5 /* Gilroy-Heavy.ttf */; };
+		CF4133FD2A8FDDB40042D9A5 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF4133F82A8FDDB40042D9A5 /* Gilroy-Regular.ttf */; };
+		CF82AD8A2A8FDF15009E3FDA /* Gilroy-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF82AD892A8FDF15009E3FDA /* Gilroy-Semibold.ttf */; };
+		CF82AD8C2A8FDF7E009E3FDA /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD8B2A8FDF7E009E3FDA /* R.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +55,7 @@
 		CF4133CF2A8ECC800042D9A5 /* CharListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListView.swift; sourceTree = "<group>"; };
 		CF4133D12A8ECCCC0042D9A5 /* MockDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataObject.swift; sourceTree = "<group>"; };
 		CF4133D52A8F5AA00042D9A5 /* DetailedCharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCharView.swift; sourceTree = "<group>"; };
-		CF4133D72A8F60C40042D9A5 /* CharHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharHeaderView.swift; sourceTree = "<group>"; };
-		CF4133D92A8F71AE0042D9A5 /* TitileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitileHeader.swift; sourceTree = "<group>"; };
+		CF4133D72A8F60C40042D9A5 /* CharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharView.swift; sourceTree = "<group>"; };
 		CF4133DB2A8F8AC30042D9A5 /* SectionTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTitle.swift; sourceTree = "<group>"; };
 		CF4133DD2A8F8B7D0042D9A5 /* DataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
 		CF4133E02A8F8CFC0042D9A5 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -60,6 +65,13 @@
 		CF4133E92A8FA2CC0042D9A5 /* BaseWhiteLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWhiteLabel.swift; sourceTree = "<group>"; };
 		CF4133EC2A8FBA770042D9A5 /* PlanetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetView.swift; sourceTree = "<group>"; };
 		CF4133EE2A8FBC890042D9A5 /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
+		CF4133F22A8FDB020042D9A5 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		CF4133F42A8FDDB30042D9A5 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		CF4133F52A8FDDB30042D9A5 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
+		CF4133F62A8FDDB40042D9A5 /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
+		CF4133F82A8FDDB40042D9A5 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
+		CF82AD892A8FDF15009E3FDA /* Gilroy-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Semibold.ttf"; sourceTree = "<group>"; };
+		CF82AD8B2A8FDF7E009E3FDA /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 		CF41339F2A8EC0690042D9A5 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				CF4133F02A8FDA960042D9A5 /* Library */,
 				CF4133B42A8EC06F0042D9A5 /* Configuration */,
 				CF4133B72A8EC08D0042D9A5 /* Resources */,
 				CF4133B52A8EC07A0042D9A5 /* Application */,
@@ -246,29 +259,20 @@
 		CF4133D42A8F5A7F0042D9A5 /* DetailedChar */ = {
 			isa = PBXGroup;
 			children = (
-				CF4133DF2A8F8CB80042D9A5 /* Items */,
 				CF4133D52A8F5AA00042D9A5 /* DetailedCharView.swift */,
 				CF4133DD2A8F8B7D0042D9A5 /* DataObject.swift */,
 			);
 			path = DetailedChar;
 			sourceTree = "<group>";
 		};
-		CF4133DF2A8F8CB80042D9A5 /* Items */ = {
-			isa = PBXGroup;
-			children = (
-				CF4133D72A8F60C40042D9A5 /* CharHeaderView.swift */,
-				CF4133D92A8F71AE0042D9A5 /* TitileHeader.swift */,
-				CF4133DB2A8F8AC30042D9A5 /* SectionTitle.swift */,
-			);
-			path = Items;
-			sourceTree = "<group>";
-		};
 		CF4133E42A8F98C50042D9A5 /* DetailedChar */ = {
 			isa = PBXGroup;
 			children = (
+				CF4133D72A8F60C40042D9A5 /* CharView.swift */,
 				CF4133E02A8F8CFC0042D9A5 /* InfoCell.swift */,
 				CF4133E72A8FA2550042D9A5 /* OriginCell.swift */,
 				CF4133EE2A8FBC890042D9A5 /* EpisodeCell.swift */,
+				CF4133DB2A8F8AC30042D9A5 /* SectionTitle.swift */,
 			);
 			path = DetailedChar;
 			sourceTree = "<group>";
@@ -279,6 +283,28 @@
 				CF4133E92A8FA2CC0042D9A5 /* BaseWhiteLabel.swift */,
 			);
 			path = Labels;
+			sourceTree = "<group>";
+		};
+		CF4133F02A8FDA960042D9A5 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				CF4133F12A8FDAF40042D9A5 /* Fonts */,
+				CF82AD8B2A8FDF7E009E3FDA /* R.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		CF4133F12A8FDAF40042D9A5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CF82AD892A8FDF15009E3FDA /* Gilroy-Semibold.ttf */,
+				CF4133F42A8FDDB30042D9A5 /* Gilroy-Bold.ttf */,
+				CF4133F62A8FDDB40042D9A5 /* Gilroy-Heavy.ttf */,
+				CF4133F52A8FDDB30042D9A5 /* Gilroy-Light.ttf */,
+				CF4133F82A8FDDB40042D9A5 /* Gilroy-Regular.ttf */,
+				CF4133F22A8FDB020042D9A5 /* Gilroy-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,8 +365,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4133FB2A8FDDB40042D9A5 /* Gilroy-Heavy.ttf in Resources */,
+				CF82AD8A2A8FDF15009E3FDA /* Gilroy-Semibold.ttf in Resources */,
 				CF4133AD2A8EC06A0042D9A5 /* LaunchScreen.storyboard in Resources */,
+				CF4133FD2A8FDDB40042D9A5 /* Gilroy-Regular.ttf in Resources */,
+				CF4133F32A8FDB020042D9A5 /* Gilroy-Medium.ttf in Resources */,
 				CF4133AA2A8EC06A0042D9A5 /* Assets.xcassets in Resources */,
+				CF4133FA2A8FDDB40042D9A5 /* Gilroy-Light.ttf in Resources */,
+				CF4133F92A8FDDB40042D9A5 /* Gilroy-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,16 +384,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF4133DC2A8F8AC30042D9A5 /* SectionTitle.swift in Sources */,
-				CF4133DA2A8F71AE0042D9A5 /* TitileHeader.swift in Sources */,
 				CF4133C42A8EC3790042D9A5 /* BaseCharListCollection.swift in Sources */,
 				CF4133EF2A8FBC890042D9A5 /* EpisodeCell.swift in Sources */,
-				CF4133D82A8F60C50042D9A5 /* CharHeaderView.swift in Sources */,
+				CF4133D82A8F60C50042D9A5 /* CharView.swift in Sources */,
 				CF4133E62A8F991B0042D9A5 /* BaseCell.swift in Sources */,
 				CF4133E12A8F8CFC0042D9A5 /* InfoCell.swift in Sources */,
 				CF4133EA2A8FA2CC0042D9A5 /* BaseWhiteLabel.swift in Sources */,
 				CF4133DE2A8F8B7D0042D9A5 /* DataObject.swift in Sources */,
 				CF4133D62A8F5AA00042D9A5 /* DetailedCharView.swift in Sources */,
 				CF4133C02A8EC3310042D9A5 /* ICharView.swift in Sources */,
+				CF82AD8C2A8FDF7E009E3FDA /* R.swift in Sources */,
 				CF4133CB2A8EC40D0042D9A5 /* CharDataObject.swift in Sources */,
 				CF4133E82A8FA2550042D9A5 /* OriginCell.swift in Sources */,
 				CF4133E32A8F98120042D9A5 /* BaseDetailedCharCollection.swift in Sources */,

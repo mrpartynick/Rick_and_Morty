@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharHeaderView: UICollectionViewCell {
+class CharView: UICollectionViewCell {
     
     public static let id = "Char"
     
@@ -22,7 +22,7 @@ class CharHeaderView: UICollectionViewCell {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = .white
-        l.font =  UIFont(name: "Gilroy-SemiBold", size: 17)
+        l.font =  UIFont(name: "Gilroy-Bold", size: 22)
         l.attributedText = NSMutableAttributedString(string: "Rick Sanchez", attributes: [NSAttributedString.Key.kern: -0.41])
         return l
     }()
@@ -30,8 +30,8 @@ class CharHeaderView: UICollectionViewCell {
     public let charStatusLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = .white
-        l.font =  UIFont(name: "Gilroy-SemiBold", size: 17)
+        l.textColor = UIColor(red: 0.278, green: 0.775, blue: 0.045, alpha: 1)
+        l.font = UIFont(name: "Gilroy-Medium", size: 16)
         l.attributedText = NSMutableAttributedString(string: "Alive", attributes: [NSAttributedString.Key.kern: -0.41])
         return l
     }()

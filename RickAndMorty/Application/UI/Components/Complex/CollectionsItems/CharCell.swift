@@ -17,6 +17,7 @@ class CharCell: BaseCell {
     override init(frame: CGRect) {
         super.init(frame: .zero)
 
+        nameLabel.font = UIFont(name: R.Fonts.gilroySemibold, size: 17)
         image.layer.cornerRadius = 10
         image.image = UIImage(named: "Rick")
         buildHierarchy()

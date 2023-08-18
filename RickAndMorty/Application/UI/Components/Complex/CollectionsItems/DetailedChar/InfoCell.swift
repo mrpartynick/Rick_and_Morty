@@ -58,7 +58,7 @@ class InfoCell: BaseCell {
         case .categoryLabel:
             label.textColor = UIColor(red: 0.768, green: 0.789, blue: 0.808, alpha: 1)
         case .valueLabel:
-            return label
+            label.font = UIFont(name: R.Fonts.gilroyMedium, size: 16)
         }
 
         return label

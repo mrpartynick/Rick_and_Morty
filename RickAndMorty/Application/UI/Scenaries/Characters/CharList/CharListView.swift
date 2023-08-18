@@ -10,10 +10,12 @@ import UIKit
 class CharListView: BaseCharListCollection {
     private var _completion: ((T) -> ())?
     
+    //MARK: - init
     init(presenter: Int?) {
         super.init()
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "Characters"
+        navigationItem.backButtonTitle = ""
     }
     
     required public init?(coder: NSCoder) {

@@ -8,6 +8,7 @@
 import UIKit
 
 class BaseWhiteLabel: UILabel {
+    
     init(text: String) {
         super.init(frame: .zero)
         self.text = text

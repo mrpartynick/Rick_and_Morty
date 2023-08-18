@@ -22,7 +22,7 @@ class SectionTitle: UICollectionReusableView {
     
     private var titleLabel: UILabel = {
         let l = UILabel()
-        l.font = UIFont.systemFont(ofSize: 20)
+        l.font = UIFont(name: R.Fonts.gilroySemibold, size: 17)
         l.textColor = .white
         l.numberOfLines = 1
         l.translatesAutoresizingMaskIntoConstraints = false

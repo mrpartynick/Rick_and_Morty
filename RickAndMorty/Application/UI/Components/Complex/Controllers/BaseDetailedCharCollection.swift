@@ -32,7 +32,7 @@ class BaseDetailedCharCollection: UICollectionViewController {
     
     //MARK: - register items
     private func registerItems() {
-        collectionView.register(CharHeaderView.self, forCellWithReuseIdentifier: CharHeaderView.id)
+        collectionView.register(CharView.self, forCellWithReuseIdentifier: CharView.id)
         collectionView.register(InfoCell.self, forCellWithReuseIdentifier: InfoCell.id)
         collectionView.register(OriginCell.self, forCellWithReuseIdentifier: OriginCell.id)
         collectionView.register(EpisodeCell.self, forCellWithReuseIdentifier: EpisodeCell.id)
@@ -129,7 +129,7 @@ extension BaseDetailedCharCollection {
         
         switch section {
         case .character:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharHeaderView.id, for: indexPath) as! CharHeaderView
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharView.id, for: indexPath) as! CharView
             return cell
             
         case .info:
@@ -151,7 +151,6 @@ extension BaseDetailedCharCollection {
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionTitle = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionTitle.id, for: indexPath) as! SectionTitle
         sectionTitle.title = "kek"
-        print(sectionTitle.title)
         return sectionTitle
     }
 }

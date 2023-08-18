@@ -19,6 +19,11 @@ class EpisodeCell: BaseCell {
     //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        nameLabel.font = UIFont(name: R.Fonts.gilroySemibold, size: 17)
+        infoLabel.font = UIFont(name: R.Fonts.gilroyMedium, size: 13)
+        infoLabel.textColor = UIColor(red: 0.278, green: 0.775, blue: 0.045, alpha: 1)
+        dateLabel.font = UIFont(name: R.Fonts.gilroyMedium, size: 12)
         dateLabel.textColor = UIColor(red: 0.577, green: 0.595, blue: 0.613, alpha: 1)
         
         addSubview(nameLabel)
