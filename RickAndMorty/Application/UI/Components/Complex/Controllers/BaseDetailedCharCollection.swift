@@ -15,10 +15,10 @@ class BaseDetailedCharCollection: UICollectionViewController {
         case origin
         case episodes
     }
+    
     private let sideInsets: CGFloat = 16
     
     internal var dataObject = DataObject()
-
     
     init() {
         super.init(collectionViewLayout: UICollectionViewLayout())
@@ -147,7 +147,7 @@ extension BaseDetailedCharCollection {
 
     }
     
-    //MARK: - suuplementary view 
+    //MARK: - suuplementary view
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionTitle = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionTitle.id, for: indexPath) as! SectionTitle
         sectionTitle.title = "kek"

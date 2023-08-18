@@ -16,6 +16,7 @@ class OriginCell: BaseCell {
     
     private let image = PlanetView()
     
+    //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         buildHierarchy()
@@ -26,12 +27,14 @@ class OriginCell: BaseCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - build Hierarchy
     private func buildHierarchy() {
         contentView.addSubview(image)
         contentView.addSubview(originNameLabel)
         contentView.addSubview(planetLabel)
     }
     
+    //MARK: - set Constraints
     private func setConstraints() {
         image.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor).isActive = true
         image.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor).isActive = true

@@ -16,6 +16,7 @@ class EpisodeCell: BaseCell {
     
     private let labelsPadding: CGFloat = 16
     
+    //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         dateLabel.textColor = UIColor(red: 0.577, green: 0.595, blue: 0.613, alpha: 1)
@@ -31,6 +32,7 @@ class EpisodeCell: BaseCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - setConstraints
     private func setConstraints() {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: labelsPadding).isActive = true

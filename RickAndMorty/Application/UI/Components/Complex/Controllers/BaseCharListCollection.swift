@@ -31,8 +31,6 @@ open class BaseCharListCollection: UICollectionViewController {
         let layout = createLayout()
         collectionView.collectionViewLayout = layout
         
-
-        
         collectionView.register(cellType, forCellWithReuseIdentifier: cellID)
     }
     
