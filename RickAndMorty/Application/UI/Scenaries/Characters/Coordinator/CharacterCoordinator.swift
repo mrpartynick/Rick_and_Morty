@@ -50,8 +50,7 @@ class CharacterCoordinator: ICharacterCoordinator {
     }
     
     private func showDetailedCharModule() {
-        let module = DetailedCharView()
-        print(self.character)
+        let module = modulesFactory.getDetailedCharModule()
         module.character = self.character
         navigationController.pushViewController(module, animated: true)
     }

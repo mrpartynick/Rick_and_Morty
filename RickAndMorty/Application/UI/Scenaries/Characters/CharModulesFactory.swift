@@ -11,4 +11,8 @@ class CharModulesFactory {
     public static func getCharListModule() -> CharListView {
         return CharListAssembly.getModule()
     }
+    
+    public static func getDetailedCharModule() -> DetailedCharView {
+        return DetailedCharAssembly.getModule()
+    }
 }
