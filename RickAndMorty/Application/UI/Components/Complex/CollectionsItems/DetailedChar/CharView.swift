@@ -22,7 +22,7 @@ class CharView: UICollectionViewCell {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = .white
-        l.font =  UIFont(name: "Gilroy-Bold", size: 22)
+        l.font =  UIFont(name: R.Fonts.gilroyBold, size: 22)
         l.attributedText = NSMutableAttributedString(string: "Rick Sanchez", attributes: [NSAttributedString.Key.kern: -0.41])
         return l
     }()
@@ -30,22 +30,18 @@ class CharView: UICollectionViewCell {
     public let charStatusLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = UIColor(red: 0.278, green: 0.775, blue: 0.045, alpha: 1)
-        l.font = UIFont(name: "Gilroy-Medium", size: 16)
+        l.textColor = R.Colors.greenLabel
+        l.font = UIFont(name: R.Fonts.gilroyMedium, size: 16)
         l.attributedText = NSMutableAttributedString(string: "Alive", attributes: [NSAttributedString.Key.kern: -0.41])
         return l
     }()
     
+    //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         buildHierarchy()
         setConstraints()
     }
-//
-//    init() {
-//        super.init(frame: .zero)
-//
-//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -57,6 +53,7 @@ class CharView: UICollectionViewCell {
         addSubview(charStatusLabel)
     }
     
+    //MARK: - set constraints
     private func setConstraints() {
         image.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         image.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true

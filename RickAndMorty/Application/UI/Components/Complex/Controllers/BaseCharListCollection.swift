@@ -38,11 +38,6 @@ open class BaseCharListCollection: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - viewDidLoad
-    override open func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     //MARK: - create layout
     private func createLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()

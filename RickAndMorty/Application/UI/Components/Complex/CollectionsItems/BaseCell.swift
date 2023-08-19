@@ -12,7 +12,7 @@ class BaseCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.layer.cornerRadius = 16
-        contentView.backgroundColor = UIColor(red: 0.15, green: 0.163, blue: 0.221, alpha: 1)
+        contentView.backgroundColor = R.Colors.cellBackground
     }
     
     required init?(coder: NSCoder) {

@@ -22,7 +22,7 @@ class OriginCell: BaseCell {
         
         originNameLabel.font = UIFont(name: R.Fonts.gilroySemibold, size: 17)
         planetLabel.font = UIFont(name: R.Fonts.gilroyMedium, size: 13)
-        planetLabel.textColor = UIColor(red: 0.278, green: 0.775, blue: 0.045, alpha: 1)
+        planetLabel.textColor = R.Colors.greenLabel
         
         buildHierarchy()
         setConstraints()

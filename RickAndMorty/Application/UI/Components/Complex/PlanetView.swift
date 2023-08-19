@@ -21,7 +21,7 @@ class PlanetView: UIView {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 10
-        backgroundColor = UIColor(red: 4/255, green: 10/255, blue: 25/255, alpha: 1)
+        backgroundColor = R.Colors.planetBackground
         addSubview(image)
         setConstraints()
     }

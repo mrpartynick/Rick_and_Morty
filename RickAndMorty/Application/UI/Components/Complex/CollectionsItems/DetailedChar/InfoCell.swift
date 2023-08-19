@@ -56,7 +56,7 @@ class InfoCell: BaseCell {
         
         switch type {
         case .categoryLabel:
-            label.textColor = UIColor(red: 0.768, green: 0.789, blue: 0.808, alpha: 1)
+            label.textColor = R.Colors.lightGrayLabel
         case .valueLabel:
             label.font = UIFont(name: R.Fonts.gilroyMedium, size: 16)
         }

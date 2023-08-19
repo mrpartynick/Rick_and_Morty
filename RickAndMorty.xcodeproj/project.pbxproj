@@ -204,9 +204,9 @@
 		CF4133C22A8EC35D0042D9A5 /* Complex */ = {
 			isa = PBXGroup;
 			children = (
+				CF4133EC2A8FBA770042D9A5 /* PlanetView.swift */,
 				CF4133D32A8ED1A20042D9A5 /* Controllers */,
 				CF4133CC2A8EC4C80042D9A5 /* CollectionsItems */,
-				CF4133EC2A8FBA770042D9A5 /* PlanetView.swift */,
 			);
 			path = Complex;
 			sourceTree = "<group>";
@@ -222,6 +222,7 @@
 		CF4133C62A8EC3C20042D9A5 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CF82AD8D2A8FE445009E3FDA /* NetworkingModels */,
 				CF4133C72A8EC3CA0042D9A5 /* DomainModels */,
 			);
 			path = Entities;
@@ -305,6 +306,13 @@
 				CF4133F22A8FDB020042D9A5 /* Gilroy-Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CF82AD8D2A8FE445009E3FDA /* NetworkingModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkingModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

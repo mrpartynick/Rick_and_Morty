@@ -39,11 +39,6 @@ class BaseDetailedCharCollection: UICollectionViewController {
         collectionView.register(SectionTitle.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionTitle.id)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        collectionView.backgroundColor = UIColor(red: 4/255, green: 10/255, blue: 25/255, alpha: 1)
-    }
-    
     //MARK: - create layout
     private func createLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
@@ -56,7 +51,7 @@ class BaseDetailedCharCollection: UICollectionViewController {
                 return section
                 
             case .info:
-                let group = self.createGroup(height: 124)
+                let group = self.createGroup(height: 110)
                 let section = self.createSection(group: group, topPadding: 16, bottomPadding: 24)
                 section.boundarySupplementaryItems = [self.createHeader()]
                 return section
@@ -150,7 +145,17 @@ extension BaseDetailedCharCollection {
     //MARK: - suuplementary view
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionTitle = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionTitle.id, for: indexPath) as! SectionTitle
-        sectionTitle.title = "kek"
+        let section = Sections(rawValue: indexPath.section)
+        switch section {
+        case .info:
+            sectionTitle.title = "Info"
+        case .origin:
+            sectionTitle.title = "Origin"
+        case .episodes:
+            sectionTitle.title = "Episodes"
+        default:
+            sectionTitle.title = ""
+        }
         return sectionTitle
     }
 }
