@@ -10,6 +10,7 @@ import UIKit
 //MARK: - View Protocol
 protocol ICharListView: AnyObject {
     func showCharacters(from dataObject: ICharListDataObject)
+    func showAlert()
 }
 
 class CharListView: BaseCharListCollection {
@@ -63,6 +64,13 @@ extension CharListView: ICharListView {
     public func showCharacters(from dataObject: ICharListDataObject) {
         self.dataObject = dataObject
         state = .Showing
+    }
+    
+    public func showAlert() {
+        let badConnectionAlert = UIAlertController(title: "Упс!", message: "Кажется, с вашим интернет-соединением что-то не так. Пожалуйста, повторите попытку позже", preferredStyle: .alert)
+        badConnectionAlert.addAction(UIAlertAction(title: "Ok!", style: .default))
+        present(badConnectionAlert, animated: true)
+        collectionView.isHidden = true 
     }
 }
 

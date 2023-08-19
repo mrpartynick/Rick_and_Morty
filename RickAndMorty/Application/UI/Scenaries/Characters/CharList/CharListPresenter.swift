@@ -35,8 +35,14 @@ class CharListPresenter: ICharListViewOutput, ICharListInteractorOutput {
         if !withError {
             let data = data!
             let dataObject = CharListDataObject(characters: data)
-            DispatchQueue.main.async {
-                self.view?.showCharacters(from: dataObject)
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                
+                if withError {
+                    self.view?.showAlert()
+                } else {
+                    self.view?.showCharacters(from: dataObject)
+                }
             }
         }
     }

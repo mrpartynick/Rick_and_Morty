@@ -164,6 +164,7 @@ extension BaseDetailedCharCollection {
 
     }
     
+    //MARK: - profile create
     private func createCharacterProfile(for cell: CharProfileCell) {
         let character = dataObject.character
         cell.nameLabel.text = character?.name
@@ -185,11 +186,13 @@ extension BaseDetailedCharCollection {
         }
     }
     
+    //MARK: - origin block create
     private func createOriginBlock(for cell: OriginCell) {
         let characterOrigin = dataObject.character?.origin
         cell.origin = characterOrigin?.name
     }
     
+    //MARK: - episode cell create
     private func createEpisodeCell(for cell: EpisodeCell, indexPath: IndexPath){
         let episode = dataObject.episodes?[indexPath.row]
         cell.dateLabel.text = episode?.airDate

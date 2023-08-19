@@ -28,7 +28,7 @@ extension NetworkingService: ICharNetService {
     public func getCharacters(completion: @escaping (Result<[Data], Error>) -> () ) {
         guard let request = getCharsRequest(by: urlString) else {return}
         let task = session.dataTask(with: request) { data, response, error in
-            guard let data = data else {return completion(.failure(error!))}
+            guard let data = data else {completion(.failure(error!)); return}
             completion(.success([data]))
         }
         
