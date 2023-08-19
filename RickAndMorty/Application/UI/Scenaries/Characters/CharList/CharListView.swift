@@ -7,11 +7,18 @@
 
 import UIKit
 
+//MARK: - View Protocol
+protocol ICharListView: AnyObject {
+    
+}
+
 class CharListView: BaseCharListCollection {
     private var _completion: ((T) -> ())?
+    private var presenter: ICharListViewOutput
     
     //MARK: - init
-    init(presenter: Int?) {
+    init(presenter: ICharListViewOutput) {
+        self.presenter = presenter
         super.init()
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "Characters"
@@ -50,5 +57,9 @@ extension CharListView {
         let char = Character()
         comp(char)
     }
+}
+
+extension CharListView: ICharListView {
+    
 }
 

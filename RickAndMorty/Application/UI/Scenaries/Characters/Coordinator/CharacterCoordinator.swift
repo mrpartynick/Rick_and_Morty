@@ -30,12 +30,14 @@ class CharacterCoordinator: ICharacterCoordinator {
         return nav
     }()
     
+    private let modulesFactory = CharModulesFactory.self
+    
     public func start() {
         showCharListModule()
     }
     
     private func showCharListModule() {
-        let module = CharListView(presenter: nil)
+        let module = modulesFactory.getCharListModule()
         
         module.completion = {[weak self] character in
             guard let self = self else {return}
