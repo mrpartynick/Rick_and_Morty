@@ -33,6 +33,7 @@ class CharListInteractor: ICharListInteractor {
                 }
             case .failure(let error):
                 print(error)
+                presenter?.charRequestDidFinish(withError: true, data: nil)
             }
         }
     }
