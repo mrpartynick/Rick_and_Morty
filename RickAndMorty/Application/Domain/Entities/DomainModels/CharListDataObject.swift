@@ -8,13 +8,13 @@
 import Foundation
 
 //MARK: - protocol
-protocol ICharDataObject {
+protocol ICharListDataObject {
     var numberOfItems: Int {get}
     func getChar(by index: Int) -> Character
 }
 
 //MARK: - realization
-class CharDataObject: ICharDataObject {
+class CharListDataObject: ICharListDataObject {
     
     public var numberOfItems: Int {
         return characters.count

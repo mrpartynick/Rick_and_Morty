@@ -34,7 +34,7 @@ class CharListPresenter: ICharListViewOutput, ICharListInteractorOutput {
     public func charRequestDidFinish(withError: Bool, data: [Character]?) {
         if !withError {
             let data = data!
-            let dataObject = CharDataObject(characters: data)
+            let dataObject = CharListDataObject(characters: data)
             DispatchQueue.main.async {
                 self.view?.showCharacters(from: dataObject)
             }

@@ -20,7 +20,7 @@ open class BaseCharListCollection: UICollectionViewController {
         }
     }
     
-    internal var dataObject: ICharDataObject? = MockDataObject()
+    internal var dataObject: ICharListDataObject? = MockDataObject()
     
     private let baseCellType = CharCell.self
     private let baseCellID = CharCell.id

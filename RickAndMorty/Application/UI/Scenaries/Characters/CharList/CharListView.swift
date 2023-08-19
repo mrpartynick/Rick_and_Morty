@@ -9,7 +9,7 @@ import UIKit
 
 //MARK: - View Protocol
 protocol ICharListView: AnyObject {
-    func showCharacters(from dataObject: ICharDataObject)
+    func showCharacters(from dataObject: ICharListDataObject)
 }
 
 class CharListView: BaseCharListCollection {
@@ -60,7 +60,7 @@ extension CharListView {
 }
 
 extension CharListView: ICharListView {
-    public func showCharacters(from dataObject: ICharDataObject) {
+    public func showCharacters(from dataObject: ICharListDataObject) {
         self.dataObject = dataObject
         state = .Showing
     }

@@ -19,7 +19,7 @@
 		CF4133C02A8EC3310042D9A5 /* ICharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133BF2A8EC3310042D9A5 /* ICharView.swift */; };
 		CF4133C42A8EC3790042D9A5 /* BaseCharListCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133C32A8EC3790042D9A5 /* BaseCharListCollection.swift */; };
 		CF4133C92A8EC3E30042D9A5 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133C82A8EC3E30042D9A5 /* Character.swift */; };
-		CF4133CB2A8EC40D0042D9A5 /* CharDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133CA2A8EC40D0042D9A5 /* CharDataObject.swift */; };
+		CF4133CB2A8EC40D0042D9A5 /* CharListDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133CA2A8EC40D0042D9A5 /* CharListDataObject.swift */; };
 		CF4133CE2A8EC4F70042D9A5 /* CharCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133CD2A8EC4F70042D9A5 /* CharCell.swift */; };
 		CF4133D02A8ECC800042D9A5 /* CharListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133CF2A8ECC800042D9A5 /* CharListView.swift */; };
 		CF4133D22A8ECCCC0042D9A5 /* MockDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133D12A8ECCCC0042D9A5 /* MockDataObject.swift */; };
@@ -67,7 +67,7 @@
 		CF4133BF2A8EC3310042D9A5 /* ICharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICharView.swift; sourceTree = "<group>"; };
 		CF4133C32A8EC3790042D9A5 /* BaseCharListCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCharListCollection.swift; sourceTree = "<group>"; };
 		CF4133C82A8EC3E30042D9A5 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		CF4133CA2A8EC40D0042D9A5 /* CharDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDataObject.swift; sourceTree = "<group>"; };
+		CF4133CA2A8EC40D0042D9A5 /* CharListDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListDataObject.swift; sourceTree = "<group>"; };
 		CF4133CD2A8EC4F70042D9A5 /* CharCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharCell.swift; sourceTree = "<group>"; };
 		CF4133CF2A8ECC800042D9A5 /* CharListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListView.swift; sourceTree = "<group>"; };
 		CF4133D12A8ECCCC0042D9A5 /* MockDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataObject.swift; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				CF4133C82A8EC3E30042D9A5 /* Character.swift */,
-				CF4133CA2A8EC40D0042D9A5 /* CharDataObject.swift */,
+				CF4133CA2A8EC40D0042D9A5 /* CharListDataObject.swift */,
 				CF4133D12A8ECCCC0042D9A5 /* MockDataObject.swift */,
 			);
 			path = DomainModels;
@@ -462,7 +462,7 @@
 				CF4133C02A8EC3310042D9A5 /* ICharView.swift in Sources */,
 				CF82AD8F2A90666F009E3FDA /* CharListPresenter.swift in Sources */,
 				CF82AD8C2A8FDF7E009E3FDA /* R.swift in Sources */,
-				CF4133CB2A8EC40D0042D9A5 /* CharDataObject.swift in Sources */,
+				CF4133CB2A8EC40D0042D9A5 /* CharListDataObject.swift in Sources */,
 				CF82AD932A906754009E3FDA /* CharListAssembly.swift in Sources */,
 				CF4133E82A8FA2550042D9A5 /* OriginCell.swift in Sources */,
 				CF4133E32A8F98120042D9A5 /* BaseDetailedCharCollection.swift in Sources */,

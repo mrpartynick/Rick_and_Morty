@@ -8,6 +8,7 @@
 import UIKit
 
 class DetailedCharView: BaseDetailedCharCollection {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = R.Colors.baseBackground

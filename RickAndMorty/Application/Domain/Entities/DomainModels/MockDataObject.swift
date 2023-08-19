@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MockDataObject: ICharDataObject {
+class MockDataObject: ICharListDataObject {
     func getChar(by index: Int) -> Character {
         return Character(name: "", status: "", species: "", type: "", gender: "", image: nil, episodes: [String]())
     }
