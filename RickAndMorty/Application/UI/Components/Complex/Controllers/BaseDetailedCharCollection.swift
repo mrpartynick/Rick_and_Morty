@@ -16,6 +16,17 @@ class BaseDetailedCharCollection: UICollectionViewController {
         case episodes
     }
     
+    internal enum State {
+        case loading
+        case showing
+    }
+    
+    internal var state: State = .loading {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     private let sideInsets: CGFloat = 16
     
     internal var dataObject = DetailedCharDataObject()
@@ -37,6 +48,7 @@ class BaseDetailedCharCollection: UICollectionViewController {
         collectionView.register(OriginCell.self, forCellWithReuseIdentifier: OriginCell.id)
         collectionView.register(EpisodeCell.self, forCellWithReuseIdentifier: EpisodeCell.id)
         collectionView.register(SectionTitle.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionTitle.id)
+        collectionView.register(ShimmerCell.self, forCellWithReuseIdentifier: ShimmerCell.id)
     }
     
     //MARK: - create layout
@@ -139,9 +151,15 @@ extension BaseDetailedCharCollection {
             return cell
             
         default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EpisodeCell.id, for: indexPath) as! EpisodeCell
-            createEpisodeCell(for: cell, indexPath: indexPath)
-            return cell
+            switch state {
+            case .loading:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShimmerCell.id, for: indexPath) as! ShimmerCell
+                return cell
+            case .showing:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EpisodeCell.id, for: indexPath) as! EpisodeCell
+                createEpisodeCell(for: cell, indexPath: indexPath)
+                return cell
+            }
         }
 
     }

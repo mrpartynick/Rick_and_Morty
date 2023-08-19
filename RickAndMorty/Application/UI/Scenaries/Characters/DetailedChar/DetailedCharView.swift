@@ -37,7 +37,7 @@ class DetailedCharView: BaseDetailedCharCollection, IDetailedCharView {
     
     public func showCharacterInfo(from dataObject: DetailedCharDataObject) {
         self.dataObject = dataObject
-        collectionView.reloadData()
+        state = .showing
     }
 
 }
