@@ -55,8 +55,13 @@ extension CharListView: ICharView {
 //MARK: - collection delegate
 extension CharListView {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let comp = _completion, let character = dataObject?.getChar(by: indexPath.row) else {return}
-        comp(character)
+        switch state {
+        case .Loading:
+            break
+        case .Showing:
+            guard let comp = _completion, let character = dataObject?.getChar(by: indexPath.row) else {return}
+            comp(character)
+        }
     }
 }
 

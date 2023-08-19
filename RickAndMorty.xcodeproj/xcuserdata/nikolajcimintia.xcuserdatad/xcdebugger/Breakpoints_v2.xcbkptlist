@@ -158,8 +158,8 @@
             filePath = "RickAndMorty/Application/UI/Components/Complex/Controllers/BaseDetailedCharCollection.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -215,6 +215,22 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "986AD1AD-333B-4DD5-904F-FED18C33D0FF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMorty/Application/Domain/Services/NetworkingService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getCharacters(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "EEB8B0FF-B153-44B6-9E94-CC940228FE90"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -222,10 +238,10 @@
             filePath = "RickAndMorty/Application/UI/Scenaries/Characters/CharList/CharListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "showCharacters(from:)"
-            landmarkType = "7">
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "CharListView"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -289,86 +305,6 @@
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0D073996-A0A2-46E6-9B99-B6540DD3BD3C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RickAndMorty/Application/UI/Components/Base/Labels/InfoValueLabel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7FC1D5A5-D13E-442C-A17A-BA7848AECFEB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RickAndMorty/Application/UI/Scenaries/Characters/CharList/CharListPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "charRequestDidFinish(withError:data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FD56DD92-87CA-4A1F-8F62-1D9CDF877610"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RickAndMorty/Application/UI/Scenaries/Characters/CharList/CharListInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "getCharacters()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7BD57133-28E9-4AE7-8751-42C07C1AB125"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RickAndMorty/Application/UI/Scenaries/Characters/CharList/CharListInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "getCharacters()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7C6CE452-453F-458C-A640-30F20A91CF55"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RickAndMorty/Application/UI/Scenaries/Characters/CharList/CharListInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getCharacters()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
