@@ -23,3 +23,11 @@
 
 # Демонстрация работы приложения: 
 
+
+
+https://github.com/mrpartynick/Rick_and_Morty/assets/86247485/8b0cf250-677c-452d-88fc-f1955e52d75f
+
+
+
+https://github.com/mrpartynick/Rick_and_Morty/assets/86247485/4d00582c-f4b0-485a-9fcf-ccbd6e6e55d6
+
