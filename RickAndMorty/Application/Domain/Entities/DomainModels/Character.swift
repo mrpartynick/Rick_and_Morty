@@ -24,6 +24,5 @@ class Character {
         self.gender = gender
         self.image = image
         self.episodes = episodes
-        
     }
 }
