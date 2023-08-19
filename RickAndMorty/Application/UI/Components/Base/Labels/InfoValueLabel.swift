@@ -14,7 +14,6 @@ class InfoValueLabel: BaseWhiteLabel {
             guard let newValue = newValue else {return}
             if newValue.isEmpty {
                 text = "None"
-                print(text)
             }
         }
     }

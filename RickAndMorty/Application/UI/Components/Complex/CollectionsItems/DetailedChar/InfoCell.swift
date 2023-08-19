@@ -9,11 +9,6 @@ import UIKit
 
 class InfoCell: BaseCell {
     public static let id = "Info"
-
-    private enum LabelType {
-        case categoryLabel
-        case valueLabel
-    }
     
     private let labelPadding: CGFloat = 16
     
@@ -39,9 +34,9 @@ class InfoCell: BaseCell {
     
     //MARK: - configure labels
     private func configureLabels() {
-        speciesLabel = configureInfoLabel(text: "Species:", for: .categoryLabel)
-        typeLabel = configureInfoLabel(text: "Type:", for: .categoryLabel)
-        genderLabel = configureInfoLabel(text: "Gender:", for: .categoryLabel)
+        speciesLabel = configureInfoLabel(text: "Species:")
+        typeLabel = configureInfoLabel(text: "Type:")
+        genderLabel = configureInfoLabel(text: "Gender:")
         
         speciesValueLabel.translatesAutoresizingMaskIntoConstraints = false
         typeValueLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -50,17 +45,10 @@ class InfoCell: BaseCell {
     
     
     //MARK: - configure info label
-    private func configureInfoLabel(text: String, for type: LabelType) -> BaseWhiteLabel {
+    private func configureInfoLabel(text: String) -> BaseWhiteLabel {
         let label = BaseWhiteLabel(text: text)
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        switch type {
-        case .categoryLabel:
-            label.textColor = R.Colors.lightGrayLabel
-        case .valueLabel:
-            label.font = UIFont(name: R.Fonts.gilroyMedium, size: 16)
-        }
-
+        label.textColor = R.Colors.lightGrayLabel
         return label
     }
     
