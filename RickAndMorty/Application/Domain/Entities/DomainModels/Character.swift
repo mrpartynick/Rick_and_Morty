@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Character {
+struct Character {
     var name: String
     var status: String
     var species: String

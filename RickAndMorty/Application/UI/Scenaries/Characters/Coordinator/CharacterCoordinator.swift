@@ -31,6 +31,7 @@ class CharacterCoordinator: ICharacterCoordinator {
     }()
     
     private let modulesFactory = CharModulesFactory.self
+    private var character: Character!
     
     public func start() {
         showCharListModule()
@@ -41,6 +42,7 @@ class CharacterCoordinator: ICharacterCoordinator {
         
         module.completion = {[weak self] character in
             guard let self = self else {return}
+            self.character = character
             showDetailedCharModule()
         }
         
@@ -49,6 +51,8 @@ class CharacterCoordinator: ICharacterCoordinator {
     
     private func showDetailedCharModule() {
         let module = DetailedCharView()
+        print(self.character)
+        module.character = self.character
         navigationController.pushViewController(module, animated: true)
     }
     

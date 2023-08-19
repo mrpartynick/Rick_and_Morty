@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class DetailedCharDataObject {
+    var character: Character?
+    var episodes: [Episode]!
+    
+    public var numberOfSections = 4
+    public var numberOfEpisodes: Int {
+        return 10
+    }
+}

@@ -18,7 +18,7 @@ class BaseDetailedCharCollection: UICollectionViewController {
     
     private let sideInsets: CGFloat = 16
     
-    internal var dataObject = DataObject()
+    internal var dataObject = DetailedCharDataObject()
     
     init() {
         super.init(collectionViewLayout: UICollectionViewLayout())
@@ -104,7 +104,7 @@ class BaseDetailedCharCollection: UICollectionViewController {
 //MARK: - data source
 extension BaseDetailedCharCollection {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return dataObject.numbersOfSections
+        return dataObject.numberOfSections
     }
     
     //MARK: - number of item

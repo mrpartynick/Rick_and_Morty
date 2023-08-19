@@ -9,6 +9,16 @@ import UIKit
 
 class DetailedCharView: BaseDetailedCharCollection {
     
+    public var character: Character? {
+        get {
+            return dataObject.character
+        }
+        
+        set {
+            dataObject.character = newValue
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = R.Colors.baseBackground
