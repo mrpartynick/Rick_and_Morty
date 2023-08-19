@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct CharRequestResult {
+struct CharRequestResult: Codable {
     var info: NetMetaInfo
+    var results: [NetCharacter]
 }
