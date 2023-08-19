@@ -31,7 +31,7 @@ class CharListView: BaseCharListCollection {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = UIColor(red: 4/255, green: 10/255, blue: 25/255, alpha: 1)
+        collectionView.backgroundColor = R.Colors.baseBackground
         presenter.viewDidLoad()
     }
     
