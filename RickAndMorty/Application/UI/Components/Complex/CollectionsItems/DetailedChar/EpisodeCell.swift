@@ -42,6 +42,7 @@ class EpisodeCell: BaseCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: labelsPadding).isActive = true
         nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: labelsPadding).isActive = true
+        nameLabel.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor).isActive = true 
         
         infoLabel.translatesAutoresizingMaskIntoConstraints = false
         infoLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: labelsPadding).isActive = true
