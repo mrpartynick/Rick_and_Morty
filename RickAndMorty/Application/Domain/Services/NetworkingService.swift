@@ -15,6 +15,7 @@ protocol IEpisodesNetService {
     func getEpisodes(episodesStringUrls: [String], completion: @escaping (Result<[Data], Error>) -> () )
 }
 
+//MARK: - definition
 class NetworkingService {
     private let numberOfPages = 42
     private let urlString = "https://rickandmortyapi.com/api/character"
@@ -22,10 +23,10 @@ class NetworkingService {
     private let episodesDispatchGroup = DispatchGroup()
 }
 
-//MARK: - char service
+//MARK: - chars service
 extension NetworkingService: ICharNetService {
     public func getCharacters(completion: @escaping (Result<[Data], Error>) -> () ) {
-        guard let request = getRequest(by: urlString) else {return}
+        guard let request = getCharsRequest(by: urlString) else {return}
         let task = session.dataTask(with: request) { data, response, error in
             guard let data = data else {return completion(.failure(error!))}
             completion(.success([data]))
@@ -34,7 +35,7 @@ extension NetworkingService: ICharNetService {
         task.resume()
     }
     
-    private func getRequest(by stringURL: String) -> URLRequest? {
+    private func getCharsRequest(by stringURL: String) -> URLRequest? {
         guard let url = URL(string: stringURL) else {return nil}
         let request = URLRequest(url: url)
         return request

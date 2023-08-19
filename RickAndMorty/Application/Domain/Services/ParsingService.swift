@@ -19,6 +19,7 @@ struct ParsingService {
 
 }
 
+//MARK: - chars service
 extension ParsingService: ICharParsingService {
     public func parseCharacters(from data: Data) throws -> [NetCharacter] {
         let parsedResult = try JSONDecoder().decode(CharRequestResult.self, from: data)
@@ -27,6 +28,7 @@ extension ParsingService: ICharParsingService {
     }
 }
 
+//MARK: - episodes service
 extension ParsingService: IDetailedCharParsingService {
     public func parseEpisodes(from data: [Data]) throws -> [NetEpisode] {
         var parsedEpisodes = [NetEpisode]()
