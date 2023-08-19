@@ -41,6 +41,10 @@
 		CF82AD912A9066E8009E3FDA /* CharListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD902A9066E8009E3FDA /* CharListInteractor.swift */; };
 		CF82AD932A906754009E3FDA /* CharListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD922A906754009E3FDA /* CharListAssembly.swift */; };
 		CF82AD952A9068CF009E3FDA /* CharModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD942A9068CF009E3FDA /* CharModulesFactory.swift */; };
+		CF82AD972A90699D009E3FDA /* NetCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD962A90699D009E3FDA /* NetCharacter.swift */; };
+		CF82AD992A906A0A009E3FDA /* NetOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD982A906A0A009E3FDA /* NetOrigin.swift */; };
+		CF82AD9B2A906A67009E3FDA /* CharRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD9A2A906A67009E3FDA /* CharRequestResult.swift */; };
+		CF82AD9D2A906A9D009E3FDA /* NetMetaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD9C2A906A9D009E3FDA /* NetMetaInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		CF82AD902A9066E8009E3FDA /* CharListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListInteractor.swift; sourceTree = "<group>"; };
 		CF82AD922A906754009E3FDA /* CharListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListAssembly.swift; sourceTree = "<group>"; };
 		CF82AD942A9068CF009E3FDA /* CharModulesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharModulesFactory.swift; sourceTree = "<group>"; };
+		CF82AD962A90699D009E3FDA /* NetCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetCharacter.swift; sourceTree = "<group>"; };
+		CF82AD982A906A0A009E3FDA /* NetOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetOrigin.swift; sourceTree = "<group>"; };
+		CF82AD9A2A906A67009E3FDA /* CharRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharRequestResult.swift; sourceTree = "<group>"; };
+		CF82AD9C2A906A9D009E3FDA /* NetMetaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetMetaInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +331,10 @@
 		CF82AD8D2A8FE445009E3FDA /* NetworkingModels */ = {
 			isa = PBXGroup;
 			children = (
+				CF82AD982A906A0A009E3FDA /* NetOrigin.swift */,
+				CF82AD962A90699D009E3FDA /* NetCharacter.swift */,
+				CF82AD9C2A906A9D009E3FDA /* NetMetaInfo.swift */,
+				CF82AD9A2A906A67009E3FDA /* CharRequestResult.swift */,
 			);
 			path = NetworkingModels;
 			sourceTree = "<group>";
@@ -403,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF82AD9D2A906A9D009E3FDA /* NetMetaInfo.swift in Sources */,
 				CF82AD952A9068CF009E3FDA /* CharModulesFactory.swift in Sources */,
 				CF4133DC2A8F8AC30042D9A5 /* SectionTitle.swift in Sources */,
 				CF4133C42A8EC3790042D9A5 /* BaseCharListCollection.swift in Sources */,
@@ -424,11 +437,14 @@
 				CF82AD912A9066E8009E3FDA /* CharListInteractor.swift in Sources */,
 				CF4133C92A8EC3E30042D9A5 /* Character.swift in Sources */,
 				CF4133A32A8EC0690042D9A5 /* SceneDelegate.swift in Sources */,
+				CF82AD972A90699D009E3FDA /* NetCharacter.swift in Sources */,
 				CF4133BD2A8EC22F0042D9A5 /* CharacterCoordinator.swift in Sources */,
 				CF4133D02A8ECC800042D9A5 /* CharListView.swift in Sources */,
+				CF82AD9B2A906A67009E3FDA /* CharRequestResult.swift in Sources */,
 				CF4133D22A8ECCCC0042D9A5 /* MockDataObject.swift in Sources */,
 				CF4133CE2A8EC4F70042D9A5 /* CharCell.swift in Sources */,
 				CF4133ED2A8FBA770042D9A5 /* PlanetView.swift in Sources */,
+				CF82AD992A906A0A009E3FDA /* NetOrigin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
