@@ -19,7 +19,7 @@ struct DataHandleService {
     
 }
 
-//MARK: - char protocol
+//MARK: - char service
 extension DataHandleService: ICharDataHandleService {
     public func convertNetCharsToDomain(netData: [NetCharacter]) -> [Character] {
         var characters = [Character]()
@@ -41,16 +41,14 @@ extension DataHandleService: ICharDataHandleService {
     }
 }
 
-//MARK: - detailed char protocol
+//MARK: - episodes service
 extension DataHandleService: IDetailedCharDataHandlerService {
     func convertNetEpisodesToDomain(netData: [NetEpisode]) -> [Episode] {
         var domainEpisodes = [Episode]()
-        var episodeCount = 1
         
         for netEpisode in netData {
             let name = netEpisode.name
-            let episode = convertDate(date: netEpisode.episode, episodeNumber: episodeCount)
-            episodeCount += 1
+            let episode = convertDate(date: netEpisode.episode)
             let airDate = netEpisode.air_date
             let domainEpisode = Episode(name: name, airDate: airDate, episode: episode)
             domainEpisodes.append(domainEpisode)
@@ -59,8 +57,12 @@ extension DataHandleService: IDetailedCharDataHandlerService {
         return domainEpisodes
     }
     
-    private func convertDate(date: String, episodeNumber: Int) -> String {
+    private func convertDate(date: String) -> String {
         var seasonNumber = date[date.index(date.startIndex, offsetBy: 2)]
+        var episodeNumber = date[date.index(date.startIndex, offsetBy: 4)..<date.endIndex]
+        if episodeNumber.first == "0" {
+            episodeNumber.removeFirst()
+        }
         let validDate = "Episode: \(episodeNumber), Season: \(seasonNumber)"
         return validDate
     }
