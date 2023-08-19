@@ -17,6 +17,7 @@ open class BaseCharListCollection: UICollectionViewController {
     internal var state: State = .Loading {
         didSet {
             collectionView.reloadData()
+            collectionView.isUserInteractionEnabled = true
         }
     }
     
@@ -33,6 +34,7 @@ open class BaseCharListCollection: UICollectionViewController {
         super.init(collectionViewLayout: UICollectionViewLayout())
         let layout = createLayout()
         collectionView.collectionViewLayout = layout
+        collectionView.isUserInteractionEnabled = false
         
         collectionView.register(baseCellType, forCellWithReuseIdentifier: baseCellID)
         collectionView.register(shimmerCellType, forCellWithReuseIdentifier: shimmerCellId)

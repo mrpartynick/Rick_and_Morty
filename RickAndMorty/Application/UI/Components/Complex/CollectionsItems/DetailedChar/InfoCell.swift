@@ -9,7 +9,7 @@ import UIKit
 
 class InfoCell: BaseCell {
     public static let id = "Info"
-    
+
     private enum LabelType {
         case categoryLabel
         case valueLabel
@@ -21,9 +21,9 @@ class InfoCell: BaseCell {
     private var typeLabel: BaseWhiteLabel!
     private var genderLabel: BaseWhiteLabel!
     
-    public var speciesValueLabel: BaseWhiteLabel!
-    public var typeValueLabel: BaseWhiteLabel!
-    public var genderValueLabel: BaseWhiteLabel!
+    public var speciesValueLabel = InfoValueLabel()
+    public var typeValueLabel = InfoValueLabel()
+    public var genderValueLabel = InfoValueLabel()
     
     //MARK: - init
     override init(frame: CGRect) {
@@ -43,9 +43,9 @@ class InfoCell: BaseCell {
         typeLabel = configureInfoLabel(text: "Type:", for: .categoryLabel)
         genderLabel = configureInfoLabel(text: "Gender:", for: .categoryLabel)
         
-        speciesValueLabel = configureInfoLabel(text: "None", for: .valueLabel)
-        typeValueLabel = configureInfoLabel(text: "None", for: .valueLabel)
-        genderValueLabel = configureInfoLabel(text: "None", for: .valueLabel)
+        speciesValueLabel.translatesAutoresizingMaskIntoConstraints = false
+        typeValueLabel.translatesAutoresizingMaskIntoConstraints = false
+        genderValueLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
     

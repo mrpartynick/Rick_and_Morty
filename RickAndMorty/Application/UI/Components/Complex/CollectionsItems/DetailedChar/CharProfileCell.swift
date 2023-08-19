@@ -7,13 +7,22 @@
 
 import UIKit
 
-class CharView: UICollectionViewCell {
+class CharProfileCell: UICollectionViewCell {
     
     public static let id = "Char"
+    
+    public var charStatus: String {
+        get {return ""}
+        set {
+            charStatusLabel.text = newValue
+        }
+    }
     
     let image: UIImageView = {
         let imv = UIImageView()
         imv.translatesAutoresizingMaskIntoConstraints = false
+        imv.layer.cornerRadius = 16
+        imv.clipsToBounds = true
         imv.image = UIImage(named: "Rick")
         return imv
     }()
@@ -27,10 +36,9 @@ class CharView: UICollectionViewCell {
         return l
     }()
     
-    public let charStatusLabel: UILabel = {
-        let l = UILabel()
+    public let charStatusLabel: CharStatusLabel = {
+        let l = CharStatusLabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = R.Colors.greenLabel
         l.font = UIFont(name: R.Fonts.gilroyMedium, size: 16)
         l.attributedText = NSMutableAttributedString(string: "Alive", attributes: [NSAttributedString.Key.kern: -0.41])
         return l

@@ -43,7 +43,7 @@ class BaseDetailedCharCollection: UICollectionViewController {
     
     //MARK: - register items
     private func registerItems() {
-        collectionView.register(CharView.self, forCellWithReuseIdentifier: CharView.id)
+        collectionView.register(CharProfileCell.self, forCellWithReuseIdentifier: CharProfileCell.id)
         collectionView.register(InfoCell.self, forCellWithReuseIdentifier: InfoCell.id)
         collectionView.register(OriginCell.self, forCellWithReuseIdentifier: OriginCell.id)
         collectionView.register(EpisodeCell.self, forCellWithReuseIdentifier: EpisodeCell.id)
@@ -136,7 +136,7 @@ extension BaseDetailedCharCollection {
         
         switch section {
         case .character:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharView.id, for: indexPath) as! CharView
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharProfileCell.id, for: indexPath) as! CharProfileCell
             createCharacterProfile(for: cell)
             return cell
             
@@ -164,7 +164,7 @@ extension BaseDetailedCharCollection {
 
     }
     
-    private func createCharacterProfile(for cell: CharView) {
+    private func createCharacterProfile(for cell: CharProfileCell) {
         let character = dataObject.character
         cell.nameLabel.text = character?.name
         cell.charStatusLabel.text = character?.status
@@ -172,16 +172,22 @@ extension BaseDetailedCharCollection {
         cell.image.image = UIImage(data: imageData)
     }
     
+    //MARK: - info block create
     private func createInfoBlock(for cell: InfoCell) {
         let character = dataObject.character
         cell.genderValueLabel.text = character?.gender
         cell.speciesValueLabel.text = character?.species
-        cell.typeValueLabel.text = character?.type
+        guard let type = character?.type else {return}
+        if type.isEmpty {
+            cell.typeValueLabel.text = "None"
+        } else {
+            cell.typeValueLabel.text = type
+        }
     }
     
     private func createOriginBlock(for cell: OriginCell) {
         let characterOrigin = dataObject.character?.origin
-        cell.originNameLabel.text = characterOrigin?.name
+        cell.origin = characterOrigin?.name
     }
     
     private func createEpisodeCell(for cell: EpisodeCell, indexPath: IndexPath){

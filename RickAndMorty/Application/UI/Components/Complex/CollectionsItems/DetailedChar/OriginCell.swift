@@ -9,13 +9,43 @@ import UIKit
 
 class OriginCell: BaseCell {
     public static let id = "Origin"
-    public let originNameLabel = BaseWhiteLabel(text: "Earth")
-    public let planetLabel = BaseWhiteLabel(text: "Planet")
     
-    private let labelsToViewPadding: CGFloat = 16
+    //MARK: - origin
+    public var origin: String? {
+        get {return originNameLabel.text}
+        set {
+            originNameLabel.text = newValue
+            status = Status(rawValue: newValue ?? "Planet") ?? .planet
+        }
+    }
     
+    //MARK: - status
+    private enum Status: String {
+        case planet = "planet"
+        case unknown = "unknown"
+    }
+    
+    private var status: Status = .planet {
+        willSet {
+            switch newValue {
+            case .unknown:
+                originNameLabel.text = "Unknown"
+                planetLabel.text = "Unknown"
+                planetLabel.textColor = R.Colors.lightGrayLabel
+            default:
+                originNameLabel.text = origin
+                planetLabel.text = "Planet"
+                planetLabel.textColor = R.Colors.greenLabel
+            }
+        }
+    }
+    
+    //MARK: - variables
     private let image = PlanetView()
-    
+    private let originNameLabel = BaseWhiteLabel(text: "Earth")
+    private let planetLabel = BaseWhiteLabel(text: "Planet")
+    private let labelsToViewPadding: CGFloat = 16
+
     //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
