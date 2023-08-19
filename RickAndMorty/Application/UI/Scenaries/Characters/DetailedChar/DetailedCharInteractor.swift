@@ -29,7 +29,6 @@ class DetailedCharInteractor: IDetailedCharInteractor {
                 } catch {
                     presenter?.requestDidFinish(withError: true, resultData: nil)
                 }
-                print(data.count)
             case .failure(let error):
                 print(error)
                 presenter?.requestDidFinish(withError: true, resultData: nil)

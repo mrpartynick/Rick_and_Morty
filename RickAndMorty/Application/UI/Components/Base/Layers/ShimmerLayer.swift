@@ -26,8 +26,8 @@ class ShimmerLayer: CAGradientLayer {
     
     //MARK: - conf prop
     private func configureProperties() {
-        let firstColor = UIColor(white: 0.85, alpha: 1).cgColor
-        let secondColor = UIColor(white: 0.95, alpha: 1).cgColor
+        let firstColor = UIColor(white: 0.95, alpha: 1).cgColor
+        let secondColor = R.Colors.cellBackground.cgColor
         colors = [firstColor, secondColor]
         startPoint = CGPoint(x: 0, y: 0.5)
         endPoint = CGPoint(x: 1, y: 0.5)
