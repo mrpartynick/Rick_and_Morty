@@ -11,10 +11,33 @@ protocol ICharParsingService {
     func parseCharacters(from data: Data) throws -> [NetCharacter]
 }
 
-struct ParsingService: ICharParsingService {
+protocol IDetailedCharParsingService {
+    func parseEpisodes(from data: [Data]) throws -> [NetEpisode]
+}
+
+struct ParsingService {
+
+}
+
+extension ParsingService: ICharParsingService {
     public func parseCharacters(from data: Data) throws -> [NetCharacter] {
         let parsedResult = try JSONDecoder().decode(CharRequestResult.self, from: data)
         let characters = parsedResult.results
         return characters
     }
+}
+
+extension ParsingService: IDetailedCharParsingService {
+    public func parseEpisodes(from data: [Data]) throws -> [NetEpisode] {
+        var parsedEpisodes = [NetEpisode]()
+        
+        for episodeData in data {
+            let parsedEpisode = try JSONDecoder().decode(NetEpisode.self, from: episodeData)
+            parsedEpisodes.append(parsedEpisode)
+        }
+        
+        return parsedEpisodes
+    }
+    
+    
 }

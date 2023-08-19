@@ -7,12 +7,12 @@
 
 import Foundation
 
-class DetailedCharDataObject {
+struct DetailedCharDataObject {
     var character: Character?
-    var episodes: [Episode]!
+    var episodes: [Episode]?
     
     public var numberOfSections = 4
     public var numberOfEpisodes: Int {
-        return 10
+        return episodes?.count ?? 0
     }
 }

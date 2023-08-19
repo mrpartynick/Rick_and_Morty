@@ -125,21 +125,52 @@ extension BaseDetailedCharCollection {
         switch section {
         case .character:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharView.id, for: indexPath) as! CharView
+            createCharacterProfile(for: cell)
             return cell
             
         case .info:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfoCell.id, for: indexPath) as! InfoCell
+            createInfoBlock(for: cell)
             return cell
             
         case .origin:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OriginCell.id, for: indexPath) as! OriginCell
+            createOriginBlock(for: cell)
             return cell
             
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EpisodeCell.id, for: indexPath) as! EpisodeCell
+            createEpisodeCell(for: cell, indexPath: indexPath)
             return cell
         }
 
+    }
+    
+    private func createCharacterProfile(for cell: CharView) {
+        let character = dataObject.character
+        cell.nameLabel.text = character?.name
+        cell.charStatusLabel.text = character?.status
+        guard let imageData = character?.image else {return}
+        cell.image.image = UIImage(data: imageData)
+    }
+    
+    private func createInfoBlock(for cell: InfoCell) {
+        let character = dataObject.character
+        cell.genderValueLabel.text = character?.gender
+        cell.speciesValueLabel.text = character?.species
+        cell.typeValueLabel.text = character?.type
+    }
+    
+    private func createOriginBlock(for cell: OriginCell) {
+        let characterOrigin = dataObject.character?.origin
+        cell.originNameLabel.text = characterOrigin?.name
+    }
+    
+    private func createEpisodeCell(for cell: EpisodeCell, indexPath: IndexPath){
+        let episode = dataObject.episodes?[indexPath.row]
+        cell.dateLabel.text = episode?.airDate
+        cell.infoLabel.text = episode?.episode
+        cell.nameLabel.text = episode?.name
     }
     
     //MARK: - suuplementary view

@@ -12,19 +12,14 @@ protocol ICharNetService {
 }
 
 protocol IEpisodesNetService {
-    
+    func getEpisodes(episodesStringUrls: [String], completion: @escaping (Result<[Data], Error>) -> () )
 }
 
-struct NetworkingService {
+class NetworkingService {
     private let numberOfPages = 42
     private let urlString = "https://rickandmortyapi.com/api/character"
     private let session = URLSession.shared
-    
-    private func getRequest(by stringURL: String) -> URLRequest? {
-        guard let url = URL(string: stringURL) else {return nil}
-        let request = URLRequest(url: url)
-        return request
-    }
+    private let episodesDispatchGroup = DispatchGroup()
 }
 
 //MARK: - char service
@@ -37,5 +32,46 @@ extension NetworkingService: ICharNetService {
         }
         
         task.resume()
+    }
+    
+    private func getRequest(by stringURL: String) -> URLRequest? {
+        guard let url = URL(string: stringURL) else {return nil}
+        let request = URLRequest(url: url)
+        return request
+    }
+}
+
+//MARK: - episodes service
+extension NetworkingService: IEpisodesNetService {
+    func getEpisodes(episodesStringUrls: [String], completion: @escaping (Result<[Data], Error>) -> ()) {
+        guard let requests = getEpisodesRequests(episodes: episodesStringUrls) else {return}
+        var dataArray: Array<Data> = .init()
+        
+        for request in requests {
+            episodesDispatchGroup.enter()
+            let task = session.dataTask(with: request) { data, response, error in
+                defer {self.episodesDispatchGroup.leave()}
+                guard let data = data else {return completion(.failure(error!))}
+                dataArray.append(data)
+            }
+            
+            task.resume()
+        }
+        
+        episodesDispatchGroup.notify(queue: DispatchQueue.global(qos: .default)) {
+            completion(.success(dataArray))
+        }
+    }
+    
+    private func getEpisodesRequests(episodes: [String]) -> [URLRequest]? {
+        var requests = [URLRequest]()
+        
+        for stringURL in episodes {
+            guard let url = URL(string: stringURL) else {return nil}
+            let request = URLRequest(url: url)
+            requests.append(request)
+        }
+        
+        return requests
     }
 }

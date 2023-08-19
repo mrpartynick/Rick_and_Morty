@@ -15,8 +15,10 @@ struct Character {
     var gender: String
     var image: Data?
     var episodes: [String]
+    var origin: NetOrigin
+    var domainEpisodes = [Episode]()
     
-    init(name: String, status: String, species: String, type: String, gender: String, image: Data?, episodes: [String]) {
+    init(name: String, status: String, species: String, type: String, gender: String, image: Data?, episodes: [String], origin: NetOrigin) {
         self.name = name
         self.status = status
         self.species = species
@@ -24,5 +26,6 @@ struct Character {
         self.gender = gender
         self.image = image
         self.episodes = episodes
+        self.origin = origin
     }
 }

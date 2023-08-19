@@ -8,18 +8,14 @@
 import UIKit
 
 protocol IDetailedCharView: AnyObject {
-    
+    func showCharacterInfo(from dataObject: DetailedCharDataObject)
 }
 
 class DetailedCharView: BaseDetailedCharCollection, IDetailedCharView {
     
-    public var character: Character? {
-        get {
-            return dataObject.character
-        }
-        
-        set {
-            dataObject.character = newValue
+    public var character: Character? = nil {
+        didSet {
+            presenter.viewDidLoad(with: character!)
         }
     }
     
@@ -37,6 +33,11 @@ class DetailedCharView: BaseDetailedCharCollection, IDetailedCharView {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = R.Colors.baseBackground
-        presenter.viewDidLoad()
     }
+    
+    public func showCharacterInfo(from dataObject: DetailedCharDataObject) {
+        self.dataObject = dataObject
+        collectionView.reloadData()
+    }
+
 }

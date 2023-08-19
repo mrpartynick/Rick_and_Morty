@@ -9,6 +9,6 @@ import Foundation
 
 struct Episode {
     var name: String
-    var air_date: String
+    var airDate: String
     var episode: String
 }
