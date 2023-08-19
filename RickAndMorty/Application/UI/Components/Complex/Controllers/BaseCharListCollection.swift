@@ -20,7 +20,7 @@ open class BaseCharListCollection: UICollectionViewController {
 //        }
 //    }
     
-    internal var dataObject: ICharDataObject? = MockDataObject()
+    internal var dataObject: ICharDataObject? = CharDataObject(characters: [Character]())
     
     private let cellType = CharCell.self
     private let cellID = CharCell.id
@@ -72,6 +72,14 @@ extension BaseCharListCollection {
     
     open override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CharCell
+        let character = dataObject?.getChar(by: indexPath.row)
+        
+        if let imageData = character?.image {
+            let image = UIImage(data: imageData)
+            cell.image.image = image
+        }
+        cell.nameLabel.text = character?.name
+        
         return cell
     }
 }

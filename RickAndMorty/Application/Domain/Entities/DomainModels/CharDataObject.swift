@@ -10,14 +10,22 @@ import Foundation
 //MARK: - protocol
 protocol ICharDataObject {
     var numberOfItems: Int {get}
+    func getChar(by index: Int) -> Character
 }
 
 //MARK: - realization
 class CharDataObject: ICharDataObject {
     
-    var numberOfItems: Int {
+    public var numberOfItems: Int {
         return characters.count
     }
+    private let characters: [Character]
     
-    private let characters = [Character]()
+    init(characters: [Character]) {
+        self.characters = characters
+    }
+    
+    public func getChar(by index: Int) -> Character {
+        return characters[index]
+    }
 }

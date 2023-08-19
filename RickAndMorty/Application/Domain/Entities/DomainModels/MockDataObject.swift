@@ -7,7 +7,8 @@
 
 import Foundation
 
-class MockDataObject: ICharDataObject {
+class MockDataObject {
+
     var numberOfItems: Int {
         return 10
     }

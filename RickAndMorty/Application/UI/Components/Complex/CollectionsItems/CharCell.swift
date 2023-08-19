@@ -19,6 +19,7 @@ class CharCell: BaseCell {
 
         nameLabel.font = UIFont(name: R.Fonts.gilroySemibold, size: 17)
         image.layer.cornerRadius = 10
+        image.clipsToBounds = true
         image.image = UIImage(named: "Rick")
         buildHierarchy()
         setConstraints()
@@ -45,5 +46,7 @@ class CharCell: BaseCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         nameLabel.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 16).isActive = true
+        nameLabel.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor).isActive = true
+        nameLabel.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor).isActive = true
     }
 }

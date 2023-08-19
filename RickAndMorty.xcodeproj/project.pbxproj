@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF3D3DD32A90715400FCE951 /* ParsingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3D3DD22A90715400FCE951 /* ParsingService.swift */; };
+		CF3D3DD52A9076D400FCE951 /* DataHandleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3D3DD42A9076D400FCE951 /* DataHandleService.swift */; };
 		CF4133A12A8EC0690042D9A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133A02A8EC0690042D9A5 /* AppDelegate.swift */; };
 		CF4133A32A8EC0690042D9A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4133A22A8EC0690042D9A5 /* SceneDelegate.swift */; };
 		CF4133AA2A8EC06A0042D9A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4133A92A8EC06A0042D9A5 /* Assets.xcassets */; };
@@ -45,9 +47,12 @@
 		CF82AD992A906A0A009E3FDA /* NetOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD982A906A0A009E3FDA /* NetOrigin.swift */; };
 		CF82AD9B2A906A67009E3FDA /* CharRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD9A2A906A67009E3FDA /* CharRequestResult.swift */; };
 		CF82AD9D2A906A9D009E3FDA /* NetMetaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD9C2A906A9D009E3FDA /* NetMetaInfo.swift */; };
+		CF82ADA02A906B54009E3FDA /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82AD9F2A906B54009E3FDA /* NetworkingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF3D3DD22A90715400FCE951 /* ParsingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingService.swift; sourceTree = "<group>"; };
+		CF3D3DD42A9076D400FCE951 /* DataHandleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandleService.swift; sourceTree = "<group>"; };
 		CF41339D2A8EC0690042D9A5 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4133A02A8EC0690042D9A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4133A22A8EC0690042D9A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 		CF82AD982A906A0A009E3FDA /* NetOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetOrigin.swift; sourceTree = "<group>"; };
 		CF82AD9A2A906A67009E3FDA /* CharRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharRequestResult.swift; sourceTree = "<group>"; };
 		CF82AD9C2A906A9D009E3FDA /* NetMetaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetMetaInfo.swift; sourceTree = "<group>"; };
+		CF82AD9F2A906B54009E3FDA /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,7 @@
 		CF4133C52A8EC3BB0042D9A5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CF82AD9E2A906B45009E3FDA /* Services */,
 				CF4133C62A8EC3C20042D9A5 /* Entities */,
 			);
 			path = Domain;
@@ -339,6 +346,16 @@
 			path = NetworkingModels;
 			sourceTree = "<group>";
 		};
+		CF82AD9E2A906B45009E3FDA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF82AD9F2A906B54009E3FDA /* NetworkingService.swift */,
+				CF3D3DD22A90715400FCE951 /* ParsingService.swift */,
+				CF3D3DD42A9076D400FCE951 /* DataHandleService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,6 +439,7 @@
 				CF4133EF2A8FBC890042D9A5 /* EpisodeCell.swift in Sources */,
 				CF4133D82A8F60C50042D9A5 /* CharView.swift in Sources */,
 				CF4133E62A8F991B0042D9A5 /* BaseCell.swift in Sources */,
+				CF82ADA02A906B54009E3FDA /* NetworkingService.swift in Sources */,
 				CF4133E12A8F8CFC0042D9A5 /* InfoCell.swift in Sources */,
 				CF4133EA2A8FA2CC0042D9A5 /* BaseWhiteLabel.swift in Sources */,
 				CF4133DE2A8F8B7D0042D9A5 /* DataObject.swift in Sources */,
@@ -434,6 +452,8 @@
 				CF4133E82A8FA2550042D9A5 /* OriginCell.swift in Sources */,
 				CF4133E32A8F98120042D9A5 /* BaseDetailedCharCollection.swift in Sources */,
 				CF4133A12A8EC0690042D9A5 /* AppDelegate.swift in Sources */,
+				CF3D3DD32A90715400FCE951 /* ParsingService.swift in Sources */,
+				CF3D3DD52A9076D400FCE951 /* DataHandleService.swift in Sources */,
 				CF82AD912A9066E8009E3FDA /* CharListInteractor.swift in Sources */,
 				CF4133C92A8EC3E30042D9A5 /* Character.swift in Sources */,
 				CF4133A32A8EC0690042D9A5 /* SceneDelegate.swift in Sources */,

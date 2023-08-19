@@ -9,7 +9,7 @@ import UIKit
 
 //MARK: - View Protocol
 protocol ICharListView: AnyObject {
-    
+    func showCharacters(from dataObject: ICharDataObject)
 }
 
 class CharListView: BaseCharListCollection {
@@ -32,6 +32,7 @@ class CharListView: BaseCharListCollection {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = UIColor(red: 4/255, green: 10/255, blue: 25/255, alpha: 1)
+        presenter.viewDidLoad()
     }
     
 }
@@ -53,13 +54,15 @@ extension CharListView: ICharView {
 //MARK: - collection delegate
 extension CharListView {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let comp = _completion else {return}
-        let char = Character()
-        comp(char)
+        guard let comp = _completion, let character = dataObject?.getChar(by: indexPath.row) else {return}
+        comp(character)
     }
 }
 
 extension CharListView: ICharListView {
-    
+    public func showCharacters(from dataObject: ICharDataObject) {
+        self.dataObject = dataObject
+        collectionView.reloadData()
+    }
 }
 
