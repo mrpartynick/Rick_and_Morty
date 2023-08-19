@@ -62,7 +62,7 @@ extension CharListView {
 extension CharListView: ICharListView {
     public func showCharacters(from dataObject: ICharDataObject) {
         self.dataObject = dataObject
-        collectionView.reloadData()
+        state = .Showing
     }
 }
 

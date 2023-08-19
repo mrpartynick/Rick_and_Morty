@@ -9,21 +9,24 @@ import UIKit
 
 open class BaseCharListCollection: UICollectionViewController {
     
-//    internal enum State {
-//        case Loading
-//        case Showing
-//    }
-//
-//    internal var state: State = .Loading {
-//        didSet {
-//            collectionView.reloadData()
-//        }
-//    }
+    internal enum State {
+        case Loading
+        case Showing
+    }
+
+    internal var state: State = .Loading {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
-    internal var dataObject: ICharDataObject? = CharDataObject(characters: [Character]())
+    internal var dataObject: ICharDataObject? = MockDataObject()
     
-    private let cellType = CharCell.self
-    private let cellID = CharCell.id
+    private let baseCellType = CharCell.self
+    private let baseCellID = CharCell.id
+    
+    private let shimmerCellType = ShimmerCell.self
+    private let shimmerCellId = ShimmerCell.id
 
     //MARK: - init
     init() {
@@ -31,7 +34,8 @@ open class BaseCharListCollection: UICollectionViewController {
         let layout = createLayout()
         collectionView.collectionViewLayout = layout
         
-        collectionView.register(cellType, forCellWithReuseIdentifier: cellID)
+        collectionView.register(baseCellType, forCellWithReuseIdentifier: baseCellID)
+        collectionView.register(shimmerCellType, forCellWithReuseIdentifier: shimmerCellId)
     }
     
     required public init?(coder: NSCoder) {
@@ -58,6 +62,18 @@ open class BaseCharListCollection: UICollectionViewController {
         return layout
     }
     
+    private func configureBaseCell(character: Character?, ip: IndexPath) -> CharCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: baseCellID, for: ip) as! CharCell
+        
+        if let imageData = character?.image {
+            let image = UIImage(data: imageData)
+            cell.image.image = image
+        }
+        cell.nameLabel.text = character?.name
+        
+        return cell
+    }
+    
 }
 
 //MARK: - data source
@@ -71,16 +87,15 @@ extension BaseCharListCollection {
     }
     
     open override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CharCell
-        let character = dataObject?.getChar(by: indexPath.row)
-        
-        if let imageData = character?.image {
-            let image = UIImage(data: imageData)
-            cell.image.image = image
+        switch state {
+        case .Loading:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: shimmerCellId, for: indexPath) as! ShimmerCell
+            return cell
+        case .Showing:
+            let character = dataObject?.getChar(by: indexPath.row)
+            return configureBaseCell(character: character, ip: indexPath)
         }
-        cell.nameLabel.text = character?.name
-        
-        return cell
+
     }
 }
 
